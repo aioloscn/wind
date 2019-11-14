@@ -24,7 +24,7 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    onLike: function(event) {
+    onLike(event) {
       let like = this.properties.like;
       let count = this.properties.count;
 

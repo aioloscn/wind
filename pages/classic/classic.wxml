@@ -1,8 +1,11 @@
 <view class="container">
     <view class="header">
         <w-episode class="episode" index="{{classicData.index}}" />
-        <w-like class="like" bind:like="onLike" like="{{classicData.like_status}}" count="{{classicData.fav_nums}}" />
+        <w-like class="like" bind:like="onLike" like="{{likeStatus}}" count="{{likeCount}}" />
     </view>
-    <w-movie img="{{classicData.image}}" content="{{classicData.content}}" />
-    <w-navi class="navi" bind:left="onNext" bind:right="onPrevious" title="{{classicData.title}}" first="{{first}}" latest="{{latest}}" />
+    <w-movie hidden="{{classicData.type!=100}}" img="{{classicData.image}}" content="{{classicData.content}}" />
+    <w-music wx:if="{{classicData.type==200}}" img="{{classicData.image}}" content="{{classicData.content}}"
+        src="{{classicData.url}}" title="{{classicData.title}}" />
+    <w-essay hidden="{{classicData.type!=300}}" img="{{classicData.image}}" content="{{classicData.content}}" />
+    <w-navi class="navi" bind:left="onPrevious" bind:right="onNext" title="{{classicData.title}}" first="{{first}}" latest="{{latest}}" />
 </view>

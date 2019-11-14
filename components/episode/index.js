@@ -1,4 +1,3 @@
-// components/episode/index.js
 Component({
   /**
    * 组件的属性列表
@@ -28,13 +27,13 @@ Component({
     _index: ''
   },
 
-  attached: function () {
+  attached() {
     let date = new Date();
     let year = date.getFullYear();
     let month = date.getMonth();
 
     this.setData({
-      year: year,
+      year,
       month: this.data.months[month]
     });
   },
