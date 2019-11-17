@@ -25,6 +25,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
+
+  },
+
+  getLatest() {
     classicModel.getLatest((res) => {
       console.log(res);
       // 数据更新
@@ -85,7 +89,8 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-},
+    this.getLatest()
+  },
 
   /**
    * 生命周期函数--监听页面隐藏

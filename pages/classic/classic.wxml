@@ -1,7 +1,12 @@
 <view class="container">
     <view class="header">
         <w-episode class="episode" index="{{classicData.index}}" />
-        <w-like class="like" bind:like="onLike" like="{{likeStatus}}" count="{{likeCount}}" />
+        <view class="like-container">
+            <w-like class="like" bind:like="onLike" like="{{likeStatus}}" count="{{likeCount}}" />
+            <w-button class="share-btn" open-type="share">
+                <image class="share" slot="img" src="/images/icon/share.png" />
+            </w-button>
+        </view>
     </view>
     <w-movie hidden="{{classicData.type!=100}}" img="{{classicData.image}}" content="{{classicData.content}}" />
     <w-music wx:if="{{classicData.type==200}}" img="{{classicData.image}}" content="{{classicData.content}}"
