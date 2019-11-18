@@ -3,9 +3,9 @@
         <w-episode class="episode" index="{{classicData.index}}" />
         <view class="like-container">
             <w-like class="like" bind:like="onLike" like="{{likeStatus}}" count="{{likeCount}}" />
-            <w-button class="share-btn" open-type="share">
-                <image class="share" slot="img" src="/images/icon/share.png" />
-            </w-button>
+            <l-button l-class="share-btn" special="{{true}}" open-type="share">
+                <image class="share" src="/images/icon/share.png" />
+            </l-button>
         </view>
     </view>
     <w-movie hidden="{{classicData.type!=100}}" img="{{classicData.image}}" content="{{classicData.content}}" />

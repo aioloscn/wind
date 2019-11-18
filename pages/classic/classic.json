@@ -6,6 +6,7 @@
     "w-essay": "/components/classic/essay/index",
     "w-episode": "/components/episode/index",
     "w-navi": "/components/navi/index",
-    "w-button": "/components/image-button/index"
+    "w-button": "/components/image-button/index",
+    "l-button": "/miniprogram_npm/lin-ui/button/index"
   }
 }
